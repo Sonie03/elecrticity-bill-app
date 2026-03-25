@@ -20,10 +20,11 @@ pipeline {
             }
         }
 
-        stage('Archive Artifacts') {
+        stage('Build Docker Image') {
             steps {
-                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                sh 'docker build -t electricity-app .'
             }
         }
+
     }
 }
