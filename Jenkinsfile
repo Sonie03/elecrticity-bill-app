@@ -10,7 +10,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/Sonie03/elecrticity-bill-app.git'
+                git branch: 'main', url: 'https://github.com/Sonie03/elecrticity-bill-app.git'
             }
         }
 
